@@ -1,0 +1,43 @@
+﻿@model Sodiacal_Sign.Models.UserForm
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ButtonForm</title>
+    <link rel="stylesheet" href="~/css/Styles.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css"/>
+</head>
+<body>
+    <div class="panel panel-succes">
+        <div class="pane-heading text-center"><h4>Please Complete the form to know your Sodiacal Sign!</h4></div>
+        <div class="panel-body">
+            <form class="p-a-1" asp-action="ButtonForm" method="post">
+                <div asp-validation-summary="All"> </div>
+                <div class="form-group">
+                    <label asp-for="Name"> Your Name:</label>
+                    <input class="form-control" asp-action="Name" />
+                </div>
+                <div class="form-group">
+
+                    <label asp-for="Birthday"> Your Birthday:</label>
+                    <input class="form-control" asp-action="Birthday" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="BirthMonth"> Your Birth Month:</label>
+                    <input class="form-control" asp-action="BirtMonth" />
+                </div>
+                <div class="text-center">
+                    <button class="btn btn-primary" type="submit">Submit Sodiacal Sign</button>
+                </div>
+               
+            </form>
+        </div>
+
+        
+    </div>
+</body>
+</html>
